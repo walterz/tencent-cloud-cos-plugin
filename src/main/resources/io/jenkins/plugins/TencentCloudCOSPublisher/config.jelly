@@ -1,0 +1,17 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry title="腾讯云Bucket名称" field="bucketName">
+  		<f:textbox checkUrl="'${rootURL}/publisher/TencentCloudCOSPublisher/checkCOSBucket?val='+encodeURIComponent(this.value)" />
+  	</f:entry>
+  	<f:entry title="artifact文件路径" field="filesPath" >
+    	<f:textbox checkUrl="'${rootURL}/publisher/TencentCloudCOSPublisher/checkFilePath?val='+encodeURIComponent(this.value)" />
+  	</f:entry>
+  	<f:entry title="COS Object前缀" field="objectPrefix" >
+    	<f:textbox />
+ 	</f:entry>
+    <f:advanced>
+        <f:entry title="是否上传文件绝对路径" field="useFullPath" >
+            <f:checkbox />
+        </f:entry>
+    </f:advanced>
+</j:jelly>

@@ -1,0 +1,19 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+  <f:section title="腾讯云COS帐号设置">
+      <f:entry title="腾讯云SecretId" field="tencentSecretId">
+        <f:textbox />
+      </f:entry>
+      <f:entry title="腾讯云SecretKey" field="tencentSecretKey">
+         <f:password />
+      </f:entry>
+      <f:entry title="腾讯云EndPoint后缀" field="tencentEndPointSuffix">
+        <f:textbox default=".myqcloud.com" />
+      </f:entry>
+	  <f:validateButton
+		  title="验证账户" progress="验证中..."
+		  method="checkTencentCloudAccount" with="tencentSecretId,tencentSecretKey,tencentEndPointSuffix" />
+  </f:section>
+
+</j:jelly>

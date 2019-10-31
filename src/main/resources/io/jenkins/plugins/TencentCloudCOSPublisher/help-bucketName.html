@@ -1,0 +1,13 @@
+<div>
+    1. Bucket名称: 填写artifact要存放的bucket<br />
+    2. 要上传的artifacts: 填写artifact文件，上传多个文件则用;隔开。同时也支持通配符描述，比如 target/*.jar 指target目录下面的所有jar文件<br />
+    3. Object前缀设置: 可以设置object key的前缀，支出使用Jenkins环境变量比如: "${JOB_NAME}"<br />
+
+    假设一个job的名称是qq，用户的设置如下<br />
+
+    1. bucketName: tencent<br />
+    2. 要上传的artifacts: hello.txt;hello1.txt<br />
+    3. Object前缀: ${JOB_NAME} <br />
+
+    那么上传后的hello.txt url为: http://tencent.cos.ap-shanghai.myqcloud.com/qq/2019-08-21_20-15-32/1/hello.txt<br />
+</div>
