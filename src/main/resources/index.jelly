@@ -1,3 +1,4 @@
+<?jelly escape-by-default='true'?>
 <div>
  	腾讯云-COS插件可以将构建后的artifact上传到腾讯云COS。
 </div>
